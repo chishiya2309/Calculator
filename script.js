@@ -40,3 +40,30 @@ let shouldResetDisplay = false;
 
 let displayElement = document.querySelector("#display");
 const buttonsNumber = document.querySelectorAll(".btn-number");
+
+function updateDisplay(digit) {
+    if(shouldResetDisplay === true) {
+        currentInput = digit;
+        shouldResetDisplay = false;
+    }else if(currentInput === "0") {
+        currentInput = digit;
+    }else {
+        currentInput += digit;
+    }
+    displayElement.textContent = currentInput;
+    storeNumberVariable();
+}
+
+function storeNumberVariable() {
+    if(operator === null) {
+        firstNumber = currentInput;
+    }else {
+        secondNumber = currentInput;
+    }
+}
+
+buttonsNumber.forEach((button) => {
+    button.addEventListener("click", () => {
+        updateDisplay(button.textContent);
+    });
+});
