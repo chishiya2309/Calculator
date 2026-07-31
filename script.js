@@ -31,8 +31,3 @@ function operate(operator, a, b) {
             throw new Error("Invalid operator");
     }
 }
-
-console.log(operate('+', 1, 2));
-console.log(operate('-', 3, 2));
-console.log(operate('*', 2, 3));
-console.log(operate('/', 4, 2));
