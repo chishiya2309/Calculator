@@ -31,3 +31,12 @@ function operate(operator, a, b) {
             throw new Error("Invalid operator");
     }
 }
+
+let currentInput = "0";
+let firstNumber = null;
+let secondNumber = null;
+let operator = null;
+let shouldResetDisplay = false;
+
+let displayElement = document.querySelector("#display");
+const buttonsNumber = document.querySelectorAll(".btn-number");
