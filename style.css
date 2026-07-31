@@ -49,3 +49,45 @@ body {
     background-color: #334155;
     border-radius: 2px;
 }
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    background-color: #334155;
+    color: #f8fafc;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.btn-clear, .btn-backspace {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.btn-operator {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+.btn-equals {
+    background-color: #10b981;
+    color: #ffffff;
+    grid-column: span 3;
+}
